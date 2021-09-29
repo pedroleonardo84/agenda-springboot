@@ -1,14 +1,14 @@
-package br.com.digitalhouse.dto;
+package br.com.digitalhouse.agenda.dto;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import br.com.digitalhouse.model.Agenda;
-import br.com.digitalhouse.model.Email;
-import br.com.digitalhouse.model.Endereco;
-import br.com.digitalhouse.model.Telefone;
+import br.com.digitalhouse.agenda.model.Agenda;
+import br.com.digitalhouse.agenda.model.Email;
+import br.com.digitalhouse.agenda.model.Endereco;
+import br.com.digitalhouse.agenda.model.Telefone;
 
 
 public class AgendaInputDto {

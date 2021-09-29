@@ -1,7 +1,7 @@
-package br.com.digitalhouse.dto;
+package br.com.digitalhouse.agenda.dto;
 
-import br.com.digitalhouse.enumeration.TipoEmail;
-import br.com.digitalhouse.model.Email;
+import br.com.digitalhouse.agenda.enumeration.TipoEmail;
+import br.com.digitalhouse.agenda.model.Email;
 
 public class EmailDto {
 

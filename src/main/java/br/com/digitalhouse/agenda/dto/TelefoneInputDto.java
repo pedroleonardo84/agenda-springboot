@@ -1,7 +1,7 @@
-package br.com.digitalhouse.dto;
+package br.com.digitalhouse.agenda.dto;
 
-import br.com.digitalhouse.enumeration.TipoTelefone;
-import br.com.digitalhouse.model.Telefone;
+import br.com.digitalhouse.agenda.enumeration.TipoTelefone;
+import br.com.digitalhouse.agenda.model.Telefone;
 
 public class TelefoneInputDto {
 	

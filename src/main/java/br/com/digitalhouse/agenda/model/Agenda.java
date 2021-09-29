@@ -1,4 +1,4 @@
-package br.com.digitalhouse.model;
+package br.com.digitalhouse.agenda.model;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -23,8 +23,10 @@ public class Agenda {
 	
 	@OneToMany(mappedBy = "agenda", cascade = CascadeType.ALL)
 	private List<Telefone> listatelefones = new ArrayList<>();
+	
 	@OneToMany(mappedBy = "agenda", cascade = CascadeType.ALL)
 	private List<Email> emails = new ArrayList<>();
+	
 	@OneToMany(mappedBy = "agenda", cascade = CascadeType.ALL)
 	private List<Endereco> enderecos = new ArrayList<>();
 	

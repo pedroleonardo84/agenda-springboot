@@ -1,11 +1,13 @@
-package br.com.digitalhouse.model;
+package br.com.digitalhouse.agenda.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
-import br.com.digitalhouse.enumeration.TipoTelefone;
+import br.com.digitalhouse.agenda.enumeration.TipoTelefone;
 
 @Entity
 public class Telefone {
@@ -15,6 +17,9 @@ public class Telefone {
 	private TipoTelefone tipo;
 	private Integer ddd;
 	private Integer numero;
+	@ManyToOne
+	@JoinColumn(name = "agenda_id", nullable = false )
+	private Agenda agenda;
 	
 	public Telefone(TipoTelefone tipo, Integer ddd, Integer numero) {
 		this.tipo = tipo;

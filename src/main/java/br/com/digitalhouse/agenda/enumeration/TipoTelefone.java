@@ -1,4 +1,4 @@
-package br.com.digitalhouse.enumeration;
+package br.com.digitalhouse.agenda.enumeration;
 
 public enum TipoTelefone {
 	COMERCIAL,

@@ -1,22 +1,17 @@
-package br.com.digitalhouse.model;
+package br.com.digitalhouse.agenda.dto;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import br.com.digitalhouse.agenda.model.Endereco;
 
-@Entity
-public class Endereco {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
+public class EnderecoInputDto {
+
 	private String logradouro;
 	private Integer numero;
 	private String cep;
 	private String cidade;
 	private String estado;
 	
-	public Endereco(String logradouro, Integer numero, String cep, String cidade, String estado) {
+	
+	public EnderecoInputDto(String logradouro, Integer numero, String cep, String cidade, String estado) {
 		this.logradouro = logradouro;
 		this.numero = numero;
 		this.cep = cep;
@@ -24,30 +19,33 @@ public class Endereco {
 		this.estado = estado;
 	}
 
-	public Endereco() {}
-	
-	public Integer getId() {
-		return id;
-	}
 
 	public String getLogradouro() {
 		return logradouro;
 	}
 
+
 	public Integer getNumero() {
 		return numero;
 	}
+
 
 	public String getCep() {
 		return cep;
 	}
 
+
 	public String getCidade() {
 		return cidade;
 	}
 
+
 	public String getEstado() {
 		return estado;
+	}
+	
+	public Endereco converte() {
+		return new Endereco(logradouro, numero, cep, cidade, estado);
 	}
 	
 }

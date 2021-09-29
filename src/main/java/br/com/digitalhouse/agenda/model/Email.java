@@ -1,4 +1,4 @@
-package br.com.digitalhouse.model;
+package br.com.digitalhouse.agenda.model;
 
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -6,8 +6,10 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
-import br.com.digitalhouse.enumeration.TipoEmail;
+import br.com.digitalhouse.agenda.enumeration.TipoEmail;
 
 @Entity
 public class Email {
@@ -18,11 +20,16 @@ public class Email {
 	@Enumerated(EnumType.STRING)
 	private TipoEmail tipo;
 	private String email;
+	@ManyToOne
+	@JoinColumn(name = "agenda_id", nullable = false)
+	private Agenda agenda;
 	
 	public Email(TipoEmail tipo, String email) {
 		this.tipo = tipo;
 		this.email = email;
 	}
+	
+	public Email() {}
 
 	public Integer getId() {
 		return id;
