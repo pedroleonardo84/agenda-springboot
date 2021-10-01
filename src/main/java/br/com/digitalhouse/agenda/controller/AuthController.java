@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import br.com.digitalhouse.agenda.dto.LoginDto;
 import br.com.digitalhouse.agenda.dto.TokenDto;
 import br.com.digitalhouse.agenda.service.TokenService;
+import io.swagger.annotations.ApiOperation;
 
 
 @RestController
@@ -25,6 +26,7 @@ public class AuthController {
 	@Autowired
 	TokenService tokenService;
 	
+	@ApiOperation(value = "autenticação do usuário")
 	@PostMapping
 	public ResponseEntity<TokenDto> login(@RequestBody LoginDto loginDto) {
 		 Authentication authenticate = authenticationManager.authenticate(
